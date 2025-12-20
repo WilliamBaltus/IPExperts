@@ -5,7 +5,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Certification from './pages/Certification';
-import ContactModal from './components/ContactModal';
+import Credentials from './pages/Credentials';
+import CalEmbed from './components/CalEmbed';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -28,14 +29,15 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home onContactClick={() => setIsContactModalOpen(true)} />} />
             <Route path="/certification" element={<Certification />} />
+            <Route path="/credentials" element={<Credentials />} />
           </Routes>
         </main>
 
         <Footer />
         
-        <ContactModal 
-          isOpen={isContactModalOpen} 
-          onClose={() => setIsContactModalOpen(false)} 
+        <CalEmbed
+          isOpen={isContactModalOpen}
+          onClose={() => setIsContactModalOpen(false)}
         />
       </div>
     </Router>

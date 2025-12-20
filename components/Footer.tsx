@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
               <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#181111] dark:text-white">Quick Links</h4>
               <div className="flex flex-col gap-3">
                 <Link className="text-gray-500 hover:text-primary transition-colors font-medium" to="/">Home</Link>
-                <a className="text-gray-500 hover:text-primary transition-colors font-medium" href="#services">Services</a>
+                <a className="text-gray-500 hover:text-primary transition-colors font-medium" href="#services">Solutions</a>
                 <a className="text-gray-500 hover:text-primary transition-colors font-medium" href="#about">Why Me</a>
                 <Link className="text-gray-500 hover:text-primary transition-colors font-medium" to="/certification">Certification</Link>
               </div>
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-col gap-6">
               <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#181111] dark:text-white">Direct Contact</h4>
               <div className="flex flex-col gap-3 text-gray-500 dark:text-gray-400">
-                <p className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">location_on</span> Personalized Nationwide Support</p>
+                <p className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">location_on</span> Serving Central & Southern NJ</p>
                 <p className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">call</span> (555) 123-4567</p>
                 <p className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">mail</span> contact@ipexperts.com</p>
               </div>

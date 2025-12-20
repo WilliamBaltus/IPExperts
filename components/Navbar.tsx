@@ -25,15 +25,9 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-9">
-            {isHome ? (
-              <>
-                <a className="text-sm font-semibold hover:text-primary transition-colors" href="#services">Services</a>
-                <a className="text-sm font-semibold hover:text-primary transition-colors" href="#about">Why Me</a>
-              </>
-            ) : (
-              <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/">Home</Link>
-            )}
-            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/certification">Certification</Link>
+            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/#services">Solutions</Link>
+            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/#about">Why Me</Link>
+            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/#certification">Certification</Link>
           </div>
 
           <div className="flex items-center gap-4">
@@ -45,9 +39,10 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             </button>
             
             {/* Mobile Toggle */}
-            <button 
+            <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-[#181111] dark:text-white p-2"
+              className="md:hidden text-[#181111] dark:text-white p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-dark transition-colors"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
               <span className="material-symbols-outlined">{isOpen ? 'close' : 'menu'}</span>
             </button>
@@ -58,13 +53,12 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-background-dark border-t border-gray-100 dark:border-neutral-dark px-4 py-6 space-y-4 animate-in slide-in-from-top duration-300">
-          <Link to="/" className="block text-lg font-bold" onClick={() => setIsOpen(false)}>Home</Link>
-          <a href="#services" className="block text-lg font-bold" onClick={() => setIsOpen(false)}>Services</a>
-          <a href="#about" className="block text-lg font-bold" onClick={() => setIsOpen(false)}>Why IP Experts</a>
-          <Link to="/certification" className="block text-lg font-bold" onClick={() => setIsOpen(false)}>Certification</Link>
-          <button 
+          <Link to="/#services" className="block text-base font-bold" onClick={() => setIsOpen(false)}>Solutions</Link>
+          <Link to="/#about" className="block text-base font-bold" onClick={() => setIsOpen(false)}>Why Me</Link>
+          <Link to="/#certification" className="block text-base font-bold" onClick={() => setIsOpen(false)}>Certification</Link>
+          <button
             onClick={() => { onContactClick(); setIsOpen(false); }}
-            className="w-full bg-primary text-white py-3 rounded-lg font-bold"
+            className="w-full bg-primary text-white py-3 px-4 rounded-lg font-bold min-h-[48px]"
           >
             Schedule Call
           </button>
