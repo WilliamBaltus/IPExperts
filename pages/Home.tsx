@@ -78,6 +78,40 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
         </div>
       </section>
 
+      {/* Service Area Banner */}
+      <section className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 dark:from-primary/20 dark:via-primary/10 dark:to-primary/20 border-y-2 border-primary/20 dark:border-primary/30 py-8 sm:py-10">
+        <div className="flex justify-center px-4 sm:px-10">
+          <div className="w-full max-w-[1200px] flex flex-col sm:flex-row items-center justify-between gap-6">
+            {/* Left: Icon & Location */}
+            <div className="flex items-center gap-4 sm:gap-6">
+              <div className="bg-primary text-white rounded-full p-3 sm:p-4 shadow-xl animate-bounce flex-shrink-0">
+                <span className="material-symbols-outlined !text-[32px] sm:!text-[40px]">location_on</span>
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="material-symbols-outlined text-primary !text-[24px]">pin_drop</span>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-[#181111] dark:text-white">
+                    Serving South & Central <span className="text-primary">New Jersey</span>
+                  </h3>
+                </div>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 font-medium">
+                  Local on-site expertise with rapid response capabilities for your facility
+                </p>
+              </div>
+            </div>
+
+            {/* Right: Coverage Badge */}
+            <div className="flex-shrink-0 bg-white dark:bg-background-dark px-6 py-4 rounded-2xl shadow-lg border-2 border-primary/20 hover:border-primary/40 transition-all">
+              <div className="text-center">
+                <p className="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1">Coverage Area</p>
+                <p className="text-2xl sm:text-3xl font-black text-primary">NJ</p>
+                <p className="text-xs font-bold text-gray-600 dark:text-gray-300">South + Central</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section id="services" className="bg-white dark:bg-background-dark py-16 sm:py-20 lg:py-24">
         <div className="flex justify-center px-4 sm:px-10">
