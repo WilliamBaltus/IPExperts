@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
   onContactClick: () => void;
@@ -9,8 +9,23 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const isHome = location.pathname === '/';
+
+  const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-[#f4f0f0] dark:border-neutral-dark shadow-sm">
@@ -25,9 +40,9 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-9">
-            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/#services">Solutions</Link>
-            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/#about">Why Me</Link>
-            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/#certification">Certification</Link>
+            <button onClick={() => scrollToSection('services')} className="text-sm font-semibold hover:text-primary transition-colors">Solutions</button>
+            <button onClick={() => scrollToSection('about')} className="text-sm font-semibold hover:text-primary transition-colors">Why Me</button>
+            <button onClick={() => scrollToSection('certification')} className="text-sm font-semibold hover:text-primary transition-colors">Certification</button>
           </div>
 
           <div className="flex items-center gap-4">
@@ -53,9 +68,9 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-background-dark border-t border-gray-100 dark:border-neutral-dark px-4 py-6 space-y-4 animate-in slide-in-from-top duration-300">
-          <Link to="/#services" className="block text-base font-bold" onClick={() => setIsOpen(false)}>Solutions</Link>
-          <Link to="/#about" className="block text-base font-bold" onClick={() => setIsOpen(false)}>Why Me</Link>
-          <Link to="/#certification" className="block text-base font-bold" onClick={() => setIsOpen(false)}>Certification</Link>
+          <button onClick={() => scrollToSection('services')} className="block text-base font-bold w-full text-left">Solutions</button>
+          <button onClick={() => scrollToSection('about')} className="block text-base font-bold w-full text-left">Why Me</button>
+          <button onClick={() => scrollToSection('certification')} className="block text-base font-bold w-full text-left">Certification</button>
           <button
             onClick={() => { onContactClick(); setIsOpen(false); }}
             className="w-full bg-primary text-white py-3 px-4 rounded-lg font-bold min-h-[48px]"

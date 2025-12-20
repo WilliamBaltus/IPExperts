@@ -7,6 +7,11 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ onContactClick }) => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="animate-in fade-in duration-700">
       {/* Hero Section */}
@@ -33,12 +38,12 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
                 >
                   Schedule Call
                 </button>
-                <a
-                  href="#services"
+                <button
+                  onClick={() => scrollToSection('services')}
                   className="flex w-full sm:min-w-[200px] sm:w-auto cursor-pointer items-center justify-center rounded-xl h-12 sm:h-14 px-6 sm:px-8 bg-gray-100 dark:bg-neutral-dark text-[#181111] dark:text-white text-base sm:text-lg font-bold hover:bg-gray-200 dark:hover:bg-neutral-light/10 transition-all border border-transparent"
                 >
                   View Services
-                </a>
+                </button>
               </div>
 
               <div className="flex items-center gap-6 pt-4">
