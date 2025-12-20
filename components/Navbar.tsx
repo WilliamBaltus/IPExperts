@@ -20,7 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             <div className="size-10 text-primary flex items-center justify-center rounded-xl bg-primary/5 group-hover:bg-primary group-hover:text-white transition-all">
               <span className="material-symbols-outlined !text-[32px]">health_and_safety</span>
             </div>
-            <h2 className="text-xl font-extrabold leading-tight tracking-tight">IPC <span className="text-primary">Solutions</span></h2>
+            <h2 className="text-xl font-extrabold leading-tight tracking-tight">IP <span className="text-primary">Experts</span></h2>
           </Link>
 
           {/* Desktop Nav */}
@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             {isHome ? (
               <>
                 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#services">Services</a>
-                <a className="text-sm font-semibold hover:text-primary transition-colors" href="#about">About</a>
+                <a className="text-sm font-semibold hover:text-primary transition-colors" href="#about">Why Me</a>
               </>
             ) : (
               <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/">Home</Link>
@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
               onClick={onContactClick}
               className="hidden sm:flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-11 px-5 bg-primary hover:bg-red-600 transition-all text-white text-sm font-bold shadow-lg shadow-primary/20 hover:-translate-y-0.5"
             >
-              Contact Us
+              Contact
             </button>
             
             {/* Mobile Toggle */}
@@ -60,13 +60,13 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
         <div className="md:hidden bg-white dark:bg-background-dark border-t border-gray-100 dark:border-neutral-dark px-4 py-6 space-y-4 animate-in slide-in-from-top duration-300">
           <Link to="/" className="block text-lg font-bold" onClick={() => setIsOpen(false)}>Home</Link>
           <a href="#services" className="block text-lg font-bold" onClick={() => setIsOpen(false)}>Services</a>
-          <a href="#about" className="block text-lg font-bold" onClick={() => setIsOpen(false)}>About</a>
+          <a href="#about" className="block text-lg font-bold" onClick={() => setIsOpen(false)}>Why IP Experts</a>
           <Link to="/certification" className="block text-lg font-bold" onClick={() => setIsOpen(false)}>Certification</Link>
           <button 
             onClick={() => { onContactClick(); setIsOpen(false); }}
             className="w-full bg-primary text-white py-3 rounded-lg font-bold"
           >
-            Contact Us
+            Schedule Call
           </button>
         </div>
       )}

@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Certification from './pages/Certification';
 import ContactModal from './components/ContactModal';
-import AIChatbot from './components/AIChatbot';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -38,8 +37,6 @@ const App: React.FC = () => {
           isOpen={isContactModalOpen} 
           onClose={() => setIsContactModalOpen(false)} 
         />
-        
-        <AIChatbot />
       </div>
     </Router>
   );

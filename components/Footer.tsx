@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
             <div className="col-span-1 md:col-span-2 flex flex-col gap-6">
               <Link to="/" className="flex items-center gap-3 text-[#181111] dark:text-white">
                 <span className="material-symbols-outlined text-primary !text-[32px]">health_and_safety</span>
-                <span className="text-2xl font-black">IPC <span className="text-primary">Solutions</span></span>
+                <span className="text-2xl font-black">IP <span className="text-primary">Experts</span></span>
               </Link>
               <p className="max-w-xs text-lg text-gray-500 dark:text-gray-400">
-                Leading the way in evidence-based infection prevention with certified excellence and public health leadership.
+                Solo consultant providing evidence-based infection prevention with certified excellence.
               </p>
               <div className="flex gap-4">
                 <a href="#" className="size-10 rounded-full bg-gray-50 dark:bg-neutral-dark flex items-center justify-center text-gray-400 hover:text-primary transition-all">
@@ -31,26 +31,26 @@ const Footer: React.FC = () => {
               <div className="flex flex-col gap-3">
                 <Link className="text-gray-500 hover:text-primary transition-colors font-medium" to="/">Home</Link>
                 <a className="text-gray-500 hover:text-primary transition-colors font-medium" href="#services">Services</a>
-                <a className="text-gray-500 hover:text-primary transition-colors font-medium" href="#about">About</a>
+                <a className="text-gray-500 hover:text-primary transition-colors font-medium" href="#about">Why Me</a>
                 <Link className="text-gray-500 hover:text-primary transition-colors font-medium" to="/certification">Certification</Link>
               </div>
             </div>
             
             <div className="flex flex-col gap-6">
-              <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#181111] dark:text-white">Contact</h4>
+              <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#181111] dark:text-white">Direct Contact</h4>
               <div className="flex flex-col gap-3 text-gray-500 dark:text-gray-400">
-                <p className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">location_on</span> Nationwide Consulting</p>
+                <p className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">location_on</span> Personalized Nationwide Support</p>
                 <p className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">call</span> (555) 123-4567</p>
-                <p className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">mail</span> info@ipcsolutions.com</p>
+                <p className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">mail</span> contact@ipexperts.com</p>
               </div>
             </div>
           </div>
           
           <div className="border-t border-gray-100 dark:border-neutral-dark pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-sm text-gray-400 font-medium italic">© 2024 IPC Solutions. All rights reserved.</p>
+            <p className="text-sm text-gray-400 font-medium italic">© 2024 IP Experts. All rights reserved.</p>
             <div className="flex gap-8 text-xs font-bold text-gray-400 uppercase tracking-widest">
                <a href="#" className="hover:text-primary">Privacy Policy</a>
-               <a href="#" className="hover:text-primary">Terms of Service</a>
+               <a href="#" className="hover:text-primary">Terms</a>
             </div>
           </div>
         </div>
