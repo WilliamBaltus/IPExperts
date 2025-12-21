@@ -31,17 +31,16 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
     <nav className="sticky top-0 z-50 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-[#f4f0f0] dark:border-neutral-dark shadow-sm">
       <div className="flex justify-center w-full px-4 sm:px-10">
         <header className="flex w-full max-w-[1200px] items-center justify-between py-4">
-          <Link to="/" className="flex items-center gap-3 text-[#181111] dark:text-white group">
+          <button onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center gap-3 text-[#181111] dark:text-white group">
             <div className="size-10 text-primary flex items-center justify-center rounded-xl bg-primary/5 group-hover:bg-primary group-hover:text-white transition-all">
               <span className="material-symbols-outlined !text-[32px]">health_and_safety</span>
             </div>
             <h2 className="text-xl font-extrabold leading-tight tracking-tight">IP <span className="text-primary">Experts</span></h2>
-          </Link>
+          </button>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-9">
             <button onClick={() => scrollToSection('services')} className="text-sm font-semibold hover:text-primary transition-colors">Solutions</button>
-            <button onClick={() => scrollToSection('about')} className="text-sm font-semibold hover:text-primary transition-colors">Why Me</button>
             <button onClick={() => scrollToSection('certification')} className="text-sm font-semibold hover:text-primary transition-colors">Certification</button>
           </div>
 
@@ -69,7 +68,6 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-background-dark border-t border-gray-100 dark:border-neutral-dark px-4 py-6 space-y-4 animate-in slide-in-from-top duration-300">
           <button onClick={() => scrollToSection('services')} className="block text-base font-bold w-full text-left">Solutions</button>
-          <button onClick={() => scrollToSection('about')} className="block text-base font-bold w-full text-left">Why Me</button>
           <button onClick={() => scrollToSection('certification')} className="block text-base font-bold w-full text-left">Certification</button>
           <button
             onClick={() => { onContactClick(); setIsOpen(false); }}

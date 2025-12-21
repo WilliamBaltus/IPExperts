@@ -40,7 +40,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
               <span className="material-symbols-outlined !text-[40px]">check_circle</span>
             </div>
             <h3 className="text-3xl font-black">Thank You!</h3>
-            <p className="text-gray-500">Our CIC® consultants will reach out to you within 24 hours.</p>
+            <p className="text-gray-500">I will reach out to you within 24 hours.</p>
           </div>
         ) : (
           <div className="flex flex-col gap-8">

@@ -64,13 +64,13 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
               </div>
             </div>
 
-            <div className="flex-1 w-full lg:max-w-[500px]">
+            <div className="flex-1 w-full lg:max-w-[500px] hidden lg:block">
               <div className="relative w-full aspect-square md:aspect-[4/5] overflow-hidden rounded-[2.5rem] shadow-2xl border-8 border-white/10">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent z-10 pointer-events-none"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=1200" 
-                  className="h-full w-full object-cover transition-transform hover:scale-110 duration-1000" 
-                  alt="Specialized medical equipment"
+                <img
+                  src="/images/ipexpertsnj.png"
+                  className="h-full w-full object-cover transition-transform hover:scale-110 duration-1000"
+                  alt="IP Experts New Jersey - Infection Prevention Specialist"
                 />
               </div>
             </div>
@@ -79,33 +79,39 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
       </section>
 
       {/* Service Area Banner */}
-      <section className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 dark:from-primary/20 dark:via-primary/10 dark:to-primary/20 border-y-2 border-primary/20 dark:border-primary/30 py-8 sm:py-10">
-        <div className="flex justify-center px-4 sm:px-10">
-          <div className="w-full max-w-[1200px] flex flex-col sm:flex-row items-center justify-between gap-6">
-            {/* Left: Icon & Location */}
-            <div className="flex items-center gap-4 sm:gap-6">
-              <div className="bg-primary text-white rounded-full p-3 sm:p-4 shadow-xl animate-bounce flex-shrink-0">
-                <span className="material-symbols-outlined !text-[32px] sm:!text-[40px]">location_on</span>
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="material-symbols-outlined text-primary !text-[24px]">pin_drop</span>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-[#181111] dark:text-white">
-                    Serving South & Central <span className="text-primary">New Jersey</span>
-                  </h3>
-                </div>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 font-medium">
-                  Local on-site expertise with rapid response capabilities for your facility
-                </p>
-              </div>
-            </div>
+      <section className="relative bg-gradient-to-br from-primary/5 via-white to-primary/5 dark:from-primary/10 dark:via-background-dark dark:to-primary/10 border-y border-primary/10 dark:border-primary/20 py-12 sm:py-16 overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
 
-            {/* Right: Coverage Badge */}
-            <div className="flex-shrink-0 bg-white dark:bg-background-dark px-6 py-4 rounded-2xl shadow-lg border-2 border-primary/20 hover:border-primary/40 transition-all">
-              <div className="text-center">
-                <p className="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1">Coverage Area</p>
-                <p className="text-2xl sm:text-3xl font-black text-primary">NJ</p>
-                <p className="text-xs font-bold text-gray-600 dark:text-gray-300">South + Central</p>
+        <div className="flex justify-center px-4 sm:px-10 relative z-10">
+          <div className="w-full max-w-[1000px] text-center flex flex-col items-center gap-6">
+          
+
+            {/* Main Heading */}
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#181111] dark:text-white leading-tight max-w-[800px]">
+              Providing <span className="text-primary">Infection Prevention</span> for New Jersey Healthcare Facilities
+            </h3>
+
+            {/* Description */}
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-[650px] leading-relaxed">
+              Decades of public health experience and high-quality work to every project. Dedication to creating safer environments through proven methodologies.
+            </p>
+
+
+            {/* Features */}
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 pt-4">
+              <div className="flex items-center gap-2 bg-white dark:bg-neutral-dark px-4 py-2 rounded-xl shadow-sm">
+                <span className="material-symbols-outlined text-primary !text-[20px]">schedule</span>
+                <span className="text-sm font-bold text-gray-700 dark:text-gray-200">Rapid Response</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white dark:bg-neutral-dark px-4 py-2 rounded-xl shadow-sm">
+                <span className="material-symbols-outlined text-primary !text-[20px]">person</span>
+                <span className="text-sm font-bold text-gray-700 dark:text-gray-200">Personalized Service</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white dark:bg-neutral-dark px-4 py-2 rounded-xl shadow-sm">
+                <span className="material-symbols-outlined text-primary !text-[20px]">verified</span>
+                <span className="text-sm font-bold text-gray-700 dark:text-gray-200">CIC® Certified</span>
               </div>
             </div>
           </div>
@@ -121,7 +127,7 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
                 Targeted <span className="text-primary">Infection Control</span> Solutions
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-[700px]">
-                I provide direct, evidence-based oversight to identify risks and maintain the highest safety standards.
+                IP Experts provide direct, evidence-based oversight to identify risks and maintain the highest safety standards.
               </p>
             </div>
 
@@ -147,8 +153,8 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
         </div>
       </section>
 
-      {/* Why IP Experts - Styled to match screenshot */}
-      <section id="about" className="bg-[#fcfcfc] dark:bg-[#0c0606] py-16 sm:py-20 lg:py-24">
+      {/* Why IP Experts - Commented Out */}
+      {/* <section id="about" className="bg-[#fcfcfc] dark:bg-[#0c0606] py-16 sm:py-20 lg:py-24">
         <div className="flex justify-center px-4 sm:px-10">
           <div className="w-full max-w-[1000px] flex flex-col gap-10">
             <div className="space-y-4">
@@ -157,45 +163,43 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
                 I bring decades of public health experience and high-quality work to every project. I am dedicated to creating safer environments through proven methodologies.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Card 1 */}
               <div className="bg-white dark:bg-background-dark p-6 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-neutral-dark flex flex-col gap-6">
                 <div className="w-full h-48 sm:h-56 md:h-64 rounded-2xl sm:rounded-3xl overflow-hidden shadow-inner">
                   <img
-                    src="https://images.unsplash.com/photo-1505751172107-573225ad4b70?auto=format&fit=crop&q=80&w=800"
+                    src="/images/cic_certified_expertise.png"
                     className="w-full h-full object-cover"
-                    alt="Clinical clipboard and stethoscope"
+                    alt="CIC Certified Expertise"
                   />
                 </div>
                 <div className="px-2 pb-2 space-y-3">
                   <h3 className="text-xl sm:text-2xl font-bold text-[#181111] dark:text-white">CIC® Certified Expertise</h3>
                   <p className="text-sm sm:text-[15px] leading-relaxed text-gray-400 font-medium">
-                    All our consultants hold the Certification in Infection Control (CIC®), ensuring top-tier knowledge, professionalism, and adherence to CBIC standards. We don't just advise; we lead with certified authority.
+                    I hold the Certification in Infection Control (CIC®), ensuring top-tier knowledge, professionalism, and adherence to CBIC standards. I don't just advise; I lead with certified authority.
                   </p>
                 </div>
               </div>
 
-              {/* Card 2 */}
               <div className="bg-white dark:bg-background-dark p-6 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-neutral-dark flex flex-col gap-6">
-                <div className="w-full h-48 sm:h-56 md:h-64 rounded-2xl sm:rounded-3xl overflow-hidden bg-[#e0f2f1]">
+                <div className="w-full h-48 sm:h-56 md:h-64 rounded-2xl sm:rounded-3xl overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&q=80&w=800"
+                    src="/images/rapid_outbreak_response.png"
                     className="w-full h-full object-cover"
-                    alt="Medical professionals illustration style"
+                    alt="Rapid Outbreak Response"
                   />
                 </div>
                 <div className="px-2 pb-2 space-y-3">
                   <h3 className="text-xl sm:text-2xl font-bold text-[#181111] dark:text-white">Rapid Outbreak Response</h3>
                   <p className="text-sm sm:text-[15px] leading-relaxed text-gray-400 font-medium">
-                    When infection rates rise, time is critical. We offer immediate support and strategic planning to contain and mitigate infection outbreaks effectively, minimizing impact on operations and reputation.
+                    When infection rates rise, time is critical. I offer immediate support and strategic planning to contain and mitigate infection outbreaks effectively, minimizing impact on operations and reputation.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Brief Certification Section */}
       <section id="certification" className="bg-white dark:bg-background-dark py-20 sm:py-24">
@@ -213,7 +217,7 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
               </h2>
 
               <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-[600px]">
-                All our consultants maintain active Certification in Infection Control (CIC®) through the Certification Board of Infection Control and Epidemiology (CBIC), ensuring evidence-based practices and the highest professional standards.
+                I maintain active Certification in Infection Control (CIC®) through the Certification Board of Infection Control and Epidemiology (CBIC), ensuring evidence-based practices and the highest professional standards.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-2">

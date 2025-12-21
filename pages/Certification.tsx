@@ -28,9 +28,9 @@ const Certification: React.FC = () => {
                 </p>
               </div>
               <div className="bg-gray-50 dark:bg-[#1a0e0e] p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-gray-100 dark:border-neutral-dark">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Our Commitment</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">My Commitment</h3>
                 <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-                  At IPC Solutions, we mandate that all our lead consultants maintain an active CIC® certification. This ensures that the advice and strategies we provide are aligned with the latest global standards and peer-reviewed research.
+                  At IP Experts, I maintain an active CIC® certification. This ensures that the advice and strategies I provide are aligned with the latest global standards and peer-reviewed research.
                 </p>
               </div>
             </div>
@@ -87,9 +87,9 @@ const Certification: React.FC = () => {
 
               {/* Verification Info */}
               <div className="flex-1 space-y-4">
-                <h3 className="text-2xl font-bold">Verify Our Credentials</h3>
+                <h3 className="text-2xl font-bold">Verify My Credentials</h3>
                 <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-                  Our CIC® certification is publicly verifiable through the Certification Board of Infection Control and Epidemiology (CBIC). Click the badge or the button below to verify our credentials directly on the CBIC website.
+                  My CIC® certification is publicly verifiable through the Certification Board of Infection Control and Epidemiology (CBIC). Click the badge or the button below to verify my credentials directly on the CBIC website.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
