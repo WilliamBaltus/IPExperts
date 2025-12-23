@@ -40,7 +40,8 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-9">
-            <button onClick={() => scrollToSection('services')} className="text-sm font-semibold hover:text-primary transition-colors">Solutions</button>
+            <button onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-sm font-semibold hover:text-primary transition-colors">Home</button>
+            <button onClick={() => scrollToSection('solutions')} className="text-sm font-semibold hover:text-primary transition-colors">Solutions</button>
             <button onClick={() => scrollToSection('certification')} className="text-sm font-semibold hover:text-primary transition-colors">Certification</button>
           </div>
 
@@ -67,7 +68,8 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-background-dark border-t border-gray-100 dark:border-neutral-dark px-4 py-6 space-y-4 animate-in slide-in-from-top duration-300">
-          <button onClick={() => scrollToSection('services')} className="block text-base font-bold w-full text-left">Solutions</button>
+          <button onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); setIsOpen(false); }} className="block text-base font-bold w-full text-left">Home</button>
+          <button onClick={() => scrollToSection('solutions')} className="block text-base font-bold w-full text-left">Solutions</button>
           <button onClick={() => scrollToSection('certification')} className="block text-base font-bold w-full text-left">Certification</button>
           <button
             onClick={() => { onContactClick(); setIsOpen(false); }}

@@ -21,7 +21,7 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
             <div className="flex flex-1 flex-col gap-8 text-left lg:pr-12">
               <div className="flex flex-col gap-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary w-fit">
-                  <span className="text-[10px] font-bold tracking-widest uppercase">Certified Solo Consultant</span>
+                  <span className="text-[10px] font-bold tracking-widest uppercase">CIC Certified Consultant</span>
                 </div>
                 <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-[#181111] dark:text-white sm:text-5xl md:text-6xl lg:text-7xl">
                   Expert Infection Prevention for a <span className="text-primary italic">Safer Tomorrow</span>
@@ -39,10 +39,10 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
                   Schedule Call
                 </button>
                 <button
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => scrollToSection('solutions')}
                   className="flex w-full sm:min-w-[200px] sm:w-auto cursor-pointer items-center justify-center rounded-xl h-12 sm:h-14 px-6 sm:px-8 bg-gray-100 dark:bg-neutral-dark text-[#181111] dark:text-white text-base sm:text-lg font-bold hover:bg-gray-200 dark:hover:bg-neutral-light/10 transition-all border border-transparent"
                 >
-                  View Services
+                  View Solutions
                 </button>
               </div>
 
@@ -118,8 +118,8 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section id="services" className="bg-white dark:bg-background-dark py-16 sm:py-20 lg:py-24">
+      {/* Solutions Grid */}
+      <section id="solutions" className="bg-white dark:bg-background-dark py-16 sm:py-20 lg:py-24">
         <div className="flex justify-center px-4 sm:px-10">
           <div className="w-full max-w-[1200px] flex flex-col gap-16">
             <div className="flex flex-col gap-4 text-center items-center">
@@ -308,9 +308,7 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
                  <button onClick={onContactClick} className="w-full sm:w-auto bg-primary text-white h-14 sm:h-16 px-8 sm:px-10 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg shadow-xl shadow-primary/25 hover:bg-red-600 transition-all">
                     Schedule Call Now
                  </button>
-                 <button onClick={onContactClick} className="w-full sm:w-auto bg-white dark:bg-transparent border-2 border-gray-200 dark:border-neutral-dark h-14 sm:h-16 px-8 sm:px-10 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg hover:bg-gray-100 dark:hover:bg-neutral-light/5 transition-all">
-                    Email Inquiries
-                 </button>
+                
                </div>
             </div>
           </div>
