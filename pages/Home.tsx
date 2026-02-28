@@ -1,12 +1,7 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-interface HomeProps {
-  onContactClick: () => void;
-}
-
-const Home: React.FC<HomeProps> = ({ onContactClick }) => {
+const Home: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -32,12 +27,12 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <button
-                  onClick={onContactClick}
+                <a
+                  href="mailto:ritalbaltus@gmail.com"
                   className="flex w-full sm:min-w-[200px] sm:w-auto cursor-pointer items-center justify-center rounded-xl h-12 sm:h-14 px-6 sm:px-8 bg-primary text-white text-base sm:text-lg font-bold shadow-xl shadow-primary/25 hover:bg-red-600 transition-all hover:-translate-y-1"
                 >
-                  Schedule Call
-                </button>
+                  Contact Me
+                </a>
                 <button
                   onClick={() => scrollToSection('solutions')}
                   className="flex w-full sm:min-w-[200px] sm:w-auto cursor-pointer items-center justify-center rounded-xl h-12 sm:h-14 px-6 sm:px-8 bg-gray-100 dark:bg-neutral-dark text-[#181111] dark:text-white text-base sm:text-lg font-bold hover:bg-gray-200 dark:hover:bg-neutral-light/10 transition-all border border-transparent"
@@ -201,7 +196,7 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
         </div>
       </section> */}
 
-      {/* Brief Certification Section */}
+      {/* Certification Section */}
       <section id="certification" className="bg-white dark:bg-background-dark py-20 sm:py-24">
         <div className="flex justify-center px-4 sm:px-10">
           <div className="w-full max-w-[1000px] flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
@@ -221,47 +216,29 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <Link
-                  to="/credentials"
+                <a
+                  href="mailto:ritalbaltus@gmail.com"
                   className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 h-12 sm:h-14 bg-primary text-white rounded-xl font-bold text-sm sm:text-base shadow-lg shadow-primary/20 hover:bg-red-600 transition-all hover:-translate-y-0.5"
                 >
-                  <span className="material-symbols-outlined">verified</span>
-                  Verify Credentials
-                </Link>
+                  <span className="material-symbols-outlined">mail</span>
+                  Contact Me
+                </a>
               </div>
             </div>
 
             {/* Right: Badge/Visual */}
             <div className="flex-shrink-0">
-              <a
-                href="https://www.cbic.org/verify-certification"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block group"
-              >
-                <div className="relative w-64 sm:w-72 h-64 sm:h-72 rounded-3xl bg-gradient-to-br from-primary/5 to-primary/10 border-4 border-primary/20 flex items-center justify-center hover:border-primary/40 transition-all hover:scale-105">
-                  {/* Placeholder for badge image */}
-                  <div className="text-center space-y-4">
-                    <div className="w-32 h-32 mx-auto rounded-full bg-white dark:bg-background-dark flex items-center justify-center border-8 border-primary/10 shadow-xl group-hover:shadow-2xl transition-all">
-                      <span className="material-symbols-outlined text-primary !text-[64px]">workspace_premium</span>
-                    </div>
-                    <div className="space-y-1">
-                      <p className="text-2xl font-black text-[#181111] dark:text-white">CIC®</p>
-                      <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">Certified Professional</p>
-                    </div>
+              <div className="relative w-64 sm:w-72 h-64 sm:h-72 rounded-3xl bg-gradient-to-br from-primary/5 to-primary/10 border-4 border-primary/20 flex items-center justify-center">
+                <div className="text-center space-y-4">
+                  <div className="w-32 h-32 mx-auto rounded-full bg-white dark:bg-background-dark flex items-center justify-center border-8 border-primary/10 shadow-xl">
+                    <span className="material-symbols-outlined text-primary !text-[64px]">workspace_premium</span>
                   </div>
-
-                  {/* When user has actual badge image, replace the above div with: */}
-                  {/* <img
-                    src="/path-to-badge-image.png"
-                    alt="CIC Certification Badge"
-                    className="w-full h-full object-contain p-8"
-                  /> */}
+                  <div className="space-y-1">
+                    <p className="text-2xl font-black text-[#181111] dark:text-white">CIC®</p>
+                    <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">Certified Professional</p>
+                  </div>
                 </div>
-                <p className="text-center mt-4 text-sm text-gray-400 group-hover:text-primary transition-colors">
-                  Click to verify credentials
-                </p>
-              </a>
+              </div>
             </div>
 
           </div>
@@ -296,19 +273,19 @@ const Home: React.FC<HomeProps> = ({ onContactClick }) => {
             <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
             <div className="relative z-10 flex flex-col items-center gap-8">
                <div className="size-20 rounded-3xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined !text-[44px]">calendar_month</span>
+                  <span className="material-symbols-outlined !text-[44px]">mail</span>
                </div>
                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#181111] dark:text-white max-w-2xl leading-tight">
                   Ready to optimize your prevention program?
                </h2>
                <p className="text-base sm:text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl">
-                  Schedule a 15-minute call to discuss your specific facility needs directly with a certified specialist.
+                  Reach out to discuss your specific facility needs directly with a certified specialist.
                </p>
                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                 <button onClick={onContactClick} className="w-full sm:w-auto bg-primary text-white h-14 sm:h-16 px-8 sm:px-10 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg shadow-xl shadow-primary/25 hover:bg-red-600 transition-all">
-                    Schedule Call Now
-                 </button>
-                
+                 <a href="mailto:ritalbaltus@gmail.com" className="w-full sm:w-auto bg-primary text-white h-14 sm:h-16 px-8 sm:px-10 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg shadow-xl shadow-primary/25 hover:bg-red-600 transition-all flex items-center justify-center gap-2">
+                    <span className="material-symbols-outlined">mail</span>
+                    Contact Me
+                 </a>
                </div>
             </div>
           </div>

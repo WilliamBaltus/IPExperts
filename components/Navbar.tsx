@@ -2,16 +2,10 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-interface NavbarProps {
-  onContactClick: () => void;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
+const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-
-  const isHome = location.pathname === '/';
 
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== '/') {
@@ -43,16 +37,17 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             <button onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-sm font-semibold hover:text-primary transition-colors">Home</button>
             <button onClick={() => scrollToSection('solutions')} className="text-sm font-semibold hover:text-primary transition-colors">Solutions</button>
             <button onClick={() => scrollToSection('certification')} className="text-sm font-semibold hover:text-primary transition-colors">Certification</button>
+            <Link to="/resources" className="text-sm font-semibold hover:text-primary transition-colors">Resources</Link>
           </div>
 
           <div className="flex items-center gap-4">
-            <button 
-              onClick={onContactClick}
+            <a
+              href="mailto:ritalbaltus@gmail.com"
               className="hidden sm:flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-11 px-5 bg-primary hover:bg-red-600 transition-all text-white text-sm font-bold shadow-lg shadow-primary/20 hover:-translate-y-0.5"
             >
-              Contact
-            </button>
-            
+              Contact Me
+            </a>
+
             {/* Mobile Toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -71,12 +66,13 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
           <button onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); setIsOpen(false); }} className="block text-base font-bold w-full text-left">Home</button>
           <button onClick={() => scrollToSection('solutions')} className="block text-base font-bold w-full text-left">Solutions</button>
           <button onClick={() => scrollToSection('certification')} className="block text-base font-bold w-full text-left">Certification</button>
-          <button
-            onClick={() => { onContactClick(); setIsOpen(false); }}
-            className="w-full bg-primary text-white py-3 px-4 rounded-lg font-bold min-h-[48px]"
+          <Link to="/resources" onClick={() => setIsOpen(false)} className="block text-base font-bold w-full text-left">Resources</Link>
+          <a
+            href="mailto:ritalbaltus@gmail.com"
+            className="block w-full bg-primary text-white py-3 px-4 rounded-lg font-bold min-h-[48px] text-center"
           >
-            Schedule Call
-          </button>
+            Contact Me
+          </a>
         </div>
       )}
     </nav>

@@ -40,6 +40,7 @@ const Footer: React.FC = () => {
                 <button onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-gray-500 hover:text-primary transition-colors font-medium text-left">Home</button>
                 <button onClick={() => scrollToSection('solutions')} className="text-gray-500 hover:text-primary transition-colors font-medium text-left">Solutions</button>
                 <Link className="text-gray-500 hover:text-primary transition-colors font-medium" to="/certification">Certification</Link>
+                <Link className="text-gray-500 hover:text-primary transition-colors font-medium" to="/resources">Resources</Link>
               </div>
             </div>
             
