@@ -68,10 +68,11 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                 <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Message (Optional)</label>
                 <textarea rows={3} className="w-full bg-gray-50 dark:bg-neutral-dark border-transparent rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary px-4 py-3 transition-all"></textarea>
               </div>
-              <button 
+              <button
                 type="submit"
-                className="w-full bg-primary text-white h-14 rounded-2xl font-bold shadow-xl shadow-primary/20 hover:bg-red-600 transition-all transform hover:-translate-y-1"
+                className="w-full bg-primary text-white h-14 rounded-2xl font-bold shadow-xl shadow-primary/20 hover:bg-red-600 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
               >
+                <span className="material-symbols-outlined">send</span>
                 Send Request
               </button>
             </form>

@@ -3,12 +3,25 @@ import { Link } from 'react-router-dom';
 
 const resources = [
   {
+    category: 'COVID-19 Resources',
+    icon: 'coronavirus',
+    items: [
+      { title: 'COVID-19: NJ Public Health Professionals', url: 'https://www.nj.gov/health/', desc: 'Information and guidance for public health professionals in New Jersey.' },
+      { title: 'COVID-19: New Jersey Updates', url: 'https://covid19.nj.gov/', desc: 'News and updates from the State of New Jersey on COVID-19.' },
+      { title: 'COVID-19: NY Healthcare Providers', url: 'https://coronavirus.health.ny.gov/information-healthcare-providers', desc: 'Information for healthcare providers in New York State.' },
+      { title: 'COVID-19: NY Vaccination Information', url: 'https://covid19vaccine.health.ny.gov/', desc: 'Information on COVID-19 vaccination programs in New York.' },
+      { title: 'CDC COVID-19 Information', url: 'https://www.cdc.gov/coronavirus/2019-nCoV/index.html', desc: 'CDC hub for COVID-19 guidance, vaccination, and updates.' },
+      { title: 'USA.gov – Government COVID-19 Response', url: 'https://www.usa.gov/coronavirus', desc: 'Resources to government response to COVID-19 and the latest updates.' },
+      { title: 'WHO – COVID-19 Advice for the Public', url: 'https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public', desc: 'Updated WHO advice and recommendations for the public.' },
+      { title: 'WHO COVID-19 Global Dashboard', url: 'https://covid19.who.int/', desc: 'Live worldwide COVID-19 statistics and tracking dashboard.' },
+    ]
+  },
+  {
     category: 'CDC Guidelines',
     icon: 'science',
     items: [
-      { title: 'Healthcare Infection Control Practices Advisory Committee (HICPAC)', url: 'https://www.cdc.gov/hicpac/index.html', desc: 'Federal advisory committee that provides guidance on infection control in healthcare settings.' },
       { title: 'CDC Hand Hygiene in Healthcare Settings', url: 'https://www.cdc.gov/handhygiene/index.html', desc: 'Guidelines and resources for hand hygiene best practices.' },
-      { title: 'CDC Isolation Precautions', url: 'https://www.cdc.gov/infectioncontrol/guidelines/isolation/index.html', desc: 'Guideline for isolation precautions in healthcare settings.' },
+      { title: 'CDC Isolation Precautions', url: 'https://www.cdc.gov/infection-control/hcp/isolation-precautions/?CDC_AAref_Val=https://www.cdc.gov/infectioncontrol/guidelines/isolation/index.html', desc: 'Guideline for isolation precautions in healthcare settings.' },
     ]
   },
   {
