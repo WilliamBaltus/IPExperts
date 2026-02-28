@@ -31,6 +31,10 @@ const resources = [
       { title: 'APIC – Association for Professionals in Infection Control', url: 'https://apic.org/', desc: 'The leading professional association for infection preventionists.' },
       { title: 'CBIC – Certification Board of Infection Control', url: 'https://www.cbic.org/', desc: 'The body that administers the CIC® certification examination.' },
       { title: 'SHEA – Society for Healthcare Epidemiology of America', url: 'https://shea-online.org/', desc: 'Scientific society advancing the science and practice of healthcare epidemiology.' },
+      { title: 'IDSA – Infectious Diseases Society of America', url: 'https://www.idsociety.org/', desc: 'Leading organization of physicians and scientists dedicated to improving health through infectious disease research and patient care.' },
+      { title: 'AAMI – Association for the Advancement of Medical Instrumentation', url: 'https://www.aami.org/', desc: 'Standards body for medical device sterilization, reprocessing, and healthcare technology safety.' },
+      { title: 'NJHA – New Jersey Hospital Association', url: 'https://www.njha.com/', desc: 'Representing New Jersey\'s healthcare community and advancing quality, safety, and access to care statewide.' },
+      { title: 'CDC / NHSN – National Healthcare Safety Network', url: 'https://www.cdc.gov/nhsn/', desc: 'The CDC\'s national system for tracking healthcare-associated infections to improve patient safety.' },
     ]
   },
   {
